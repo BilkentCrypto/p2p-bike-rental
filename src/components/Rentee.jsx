@@ -1,6 +1,9 @@
 import { Card } from "antd";
 import { useEffect, useState } from "react";
 import Web3Modal from "web3modal";
+import { ethers } from "ethers";
+import { userAddress } from "../config";
+import User from "../contracts/User.json";
 
 const styles = {
   title: {
@@ -26,15 +29,35 @@ const styles = {
 // To-do Buy a Kit function
 
 function Rentee() {
+  // List all the bikes
   const [stake, setStake] = useState([]);
   const [loadingState, setLoadingState] = useState("not-loaded");
   useEffect(() => {
     loadKit();
   }, []);
 
-  function loadKit() {
-    let items = [1, 2];
-    setStake(items);
+  async function loadKit() {
+    const web3Modal = new Web3Modal({
+      network: "mainnet",
+      cacheProvider: true,
+    });
+    const connection = await web3Modal.connect();
+    const provider = new ethers.providers.Web3Provider(connection);
+    const signer = provider.getSigner();
+
+    const contract = new ethers.Contract(userAddress, User.abi, signer);
+    console.log("I am here", contract);
+    // this will be useful if the rentee did not register the bike
+    //    const addBicycle = await contract.functions.addNewBicycle("testBike", "0x076c8831785a841f81d5e5e1f693c761beceb1b7", 5, 2000);
+
+    const bicycleCount = await contract.functions.getBicycleCount();
+
+    console.log("Bic count", bicycleCount);
+    const bicycleInfo = await contract.functions.getRentalBicycleInfo(0);
+    console.log("Info", bicycleInfo);
+    const rentals = await contract.functions.rentals(0);
+    console.log("Rentals", rentals);
+    setStake(bicycleCount);
     setLoadingState("loaded");
   }
 
