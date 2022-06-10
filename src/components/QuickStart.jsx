@@ -1,6 +1,7 @@
 import { Card, Timeline, Typography } from "antd";
 import React, { useMemo } from "react";
 import { useMoralis } from "react-moralis";
+import { Link } from "react-router-dom";
 
 const { Text } = Typography;
 
@@ -42,15 +43,8 @@ export default function QuickStart({ isServerInfo }) {
       >
         <Timeline mode="left" style={styles.timeline}>
           <Timeline.Item dot="📄">
-            <Text delete style={styles.text}>
-              Clone or fork{" "}
-              <a
-                href="https://github.com/ethereum-boilerplate/ethereum-boilerplate#-quick-start"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                ethereum-boilerplate
-              </a>{" "}
+            <Text style={styles.text}>
+              <Link to="/bearentee"> Be a Rentee </Link>
             </Text>
           </Timeline.Item>
         </Timeline>
@@ -60,30 +54,14 @@ export default function QuickStart({ isServerInfo }) {
           style={styles.card}
           title={
             <>
-              💣 <Text strong>Be a renter(</Text>
+              <Text strong>Be a renter(</Text>
             </>
           }
         >
           <Timeline mode="left" style={styles.timeline}>
             <Timeline.Item dot="💿">
               <Text style={styles.text}>
-                Install{" "}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.npmjs.com/package/truffle"
-                >
-                  Truffle
-                </a>{" "}
-                and{" "}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.npmjs.com/package/ganache-cli"
-                >
-                  ganache-cli
-                </a>{" "}
-                <Text code>npm install -g ganache-cli truffle</Text>
+                <Link to="/bearenter">Home</Link>
               </Text>
             </Timeline.Item>
           </Timeline>
@@ -92,8 +70,7 @@ export default function QuickStart({ isServerInfo }) {
           style={{ marginTop: "10px", ...styles.card }}
           title={
             <>
-              📡{" "}
-              <Text strong> Become a Validator</Text>
+              📡 <Text strong> Become a Validator</Text>
             </>
           }
         >
