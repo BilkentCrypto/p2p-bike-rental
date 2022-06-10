@@ -53,7 +53,7 @@ const bikeProperty = {
 export default function Renter() {
   // List the bike of one person
   // Change the availability of the bike
-  const [kit, setKits] = useState([]);
+  const [rentals, setRentals] = useState([]);
   const [loadingState, setLoadingState] = useState("not-loaded");
   useEffect(() => {
     loadKit();
@@ -69,18 +69,11 @@ export default function Renter() {
     const provider = new ethers.providers.Web3Provider(connection);
     if (provider) {
       const signer = provider.getSigner();
-
       const contract = new ethers.Contract(userAddress, User.abi, signer);
-      console.log("I am here", contract);
-      // this will be useful if the rentee did not register the bike
-      //    const addBicycle = await contract.functions.addNewBicycle("testBike", "0x076c8831785a841f81d5e5e1f693c761beceb1b7", 5, 2000);
-      console.log("lan");
-      const bicycleCount = await contract.functions.getBicycleCount();
-      console.log("Bic count", bicycleCount);
-      const bicycleInfo = bikeProperty;
-      const rentals = await contract.functions.rentals(0);
-      console.log("Rentals", rentals);
-      setKits(bicycleCount);
+      let item = await contract.functions.rentals(0);
+      console.log("Rentals", item);
+      console.log("is it false", item.isAvailable);
+      setRentals(item);
       setLoadingState("loaded");
     } else {
       console.log("the connection wasn't established");
@@ -90,9 +83,24 @@ export default function Renter() {
   async function changeAvailability(e) {
     e.preventDefault();
     console.log("i am here");
+    const web3Modal = new Web3Modal({
+      network: "mainnet",
+      cacheProvider: true,
+    });
+    console.log("wtf");
+    const connection = await web3Modal.connect();
+    const provider = new ethers.providers.Web3Provider(connection);
+    if (provider) {
+      const signer = provider.getSigner();
+      const contract = new ethers.Contract(userAddress, User.abi, signer);
+      await contract.functions.changeAvailable(0);
+    } else {
+      console.log("the connection wasn't established");
+    }
   }
 
-  if (loadingState === "loaded" && !kit.length) {
+  console.log(rentals);
+  if (loadingState === "loaded" && !rentals.length) {
     return (
       <Card style={styles.card}>
         <div style={styles.header}>
@@ -101,17 +109,18 @@ export default function Renter() {
         </div>
       </Card>
     );
-  } else {
-    return (
-      <Card style={styles.card}>
-        <div style={styles.header}>
-          Hi {"  \n "}
-          You have a kit, now:
-          <h1> Your bicycle info: </h1>
-          <h2> DO you wanna change it bro?</h2>
-          <button onClick={changeAvailability}> Change Availability</button>
-        </div>
-      </Card>
-    );
   }
+  return (
+    <Card style={styles.card}>
+      <div style={styles.header}>
+        Hi {"  \n "}
+        You have a kit, now:
+        <h1> Your bicycle info: </h1>
+        <h2> Do you wanna change it bro?</h2>
+        <h3> Bike's Name {rentals[0]}</h3>
+        <h4> Bike's availability {rentals.isAvailable}</h4>
+        <button onClick={changeAvailability}> Change Availability</button>
+      </div>
+    </Card>
+  );
 }
