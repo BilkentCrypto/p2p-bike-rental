@@ -25,8 +25,8 @@ const styles = {
 
 // To-do Buy a Kit function
 
-function Renter() {
-  const [kit, setKits] = useState([]);
+function Rentee() {
+  const [stake, setStake] = useState([]);
   const [loadingState, setLoadingState] = useState("not-loaded");
   useEffect(() => {
     loadKit();
@@ -34,11 +34,11 @@ function Renter() {
 
   function loadKit() {
     let items = [1, 2];
-    setKits(items);
+    setStake(items);
     setLoadingState("loaded");
   }
 
-  if (loadingState === "loaded" && !kit.length) {
+  if (loadingState === "loaded" && !stake.length) {
     return (
       <Card style={styles.card}>
         <div style={styles.header}>
@@ -58,4 +58,4 @@ function Renter() {
     );
   }
 }
-export default Renter;
+export default Rentee;

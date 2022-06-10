@@ -43,15 +43,8 @@ export default function QuickStart({ isServerInfo }) {
       >
         <Timeline mode="left" style={styles.timeline}>
           <Timeline.Item dot="📄">
-            <Text delete style={styles.text}>
-              Clone or fork{" "}
-              <a
-                href="https://github.com/ethereum-boilerplate/ethereum-boilerplate#-quick-start"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                ethereum-boilerplate
-              </a>{" "}
+            <Text style={styles.text}>
+              <Link to="/bearentee"> Be a Rentee </Link>
             </Text>
           </Timeline.Item>
         </Timeline>
