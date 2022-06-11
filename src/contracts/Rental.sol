@@ -48,7 +48,7 @@ contract Rental {
     function rentBiycycle(uint bicycleId) external payable returns (bool) { 
     require (msg.value>= rentals[bicycleId].bicyclePrice);
        
-      assert(!stopped); 
+      require(!stopped); 
         
         
        //Validate bicycleId is within array
@@ -122,8 +122,8 @@ contract Rental {
     }
 
     //Add RentableBicycle
-    function addNewBicycle(string memory make, address owner,uint bicyclePrice, uint year,uint timePrice,address _bikeaddress, uint8 _v, bytes32 _r, bytes32 _s) public  returns (uint) {
-        assert(!stopped); 
+    function addNewBicycle(string memory make,uint bicyclePrice, uint year,uint timePrice,address _bikeaddress, uint8 _v, bytes32 _r, bytes32 _s) public  returns (uint) {
+        require(!stopped); 
         require(VerifyMessage(_bikeaddress,  _v,  _r, _s));
         require(kitaddresses[_bikeaddress]==true);
         //Create bicycle object within function
@@ -132,7 +132,7 @@ contract Rental {
         uint count = getBicycleCount();
         //Increment Count
         //Construct Bicycle Object
-        BicycleLib.Bicycle memory newBicycle = BicycleLib.Bicycle(make,true, address(0), owner,bicyclePrice, year,count, timePrice,0);
+        BicycleLib.Bicycle memory newBicycle = BicycleLib.Bicycle(make,true, address(0), msg.sender,bicyclePrice, year,count, timePrice,0);
         
         //Add to Array
         rentals.push(newBicycle);
@@ -151,4 +151,9 @@ contract Rental {
    }
 
    
+  
+}
+
+
+
   
