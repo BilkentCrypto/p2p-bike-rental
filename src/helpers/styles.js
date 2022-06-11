@@ -20,7 +20,7 @@ export const styles = {
     padding: "0 10px",
     boxShadow: "0 1px 10px rgb(151 164 175 / 10%)",
   },
-  headerWallet: {
+  header2: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -37,31 +37,23 @@ export const styles = {
     fontSize: "30px",
     fontWeight: "600",
   },
-  headerRentBike: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    gap: "5px",
-  },
   card: {
     background: "#212124",
     border: "1px solid #46464D",
     borderRadius: "1rem",
     width: "450px",
   },
-  title: {
-    fontSize: "20px",
-    fontWeight: "700",
+  headerRentBike: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    gap: "5px",
+
   },
   text: {
     fontSize: "16px",
     color: "#fff",
     fontWeight: "400",
-  },
-  card: {
-    background: "#212124",
-    border: "1px solid #46464D",
-    borderRadius: "1rem",
   },
   timeline: {
     marginBottom: "-45px",
@@ -119,7 +111,7 @@ export const styles = {
     flexDirection: "column",
     alignItems: "center",
     color: "#fff",
-    gap: "5px",
+    gap: "15px",
   },
   item: {
     display: "flex",
@@ -131,8 +123,10 @@ export const styles = {
     padding: "0 10px",
   },
   button: {
-    border: "2px solid rgb(231, 234, 243)",
-    borderRadius: "12px",
+    color: "#fff",
+    background: "#4D516B",
+    border: "1px solid #8EA8D4",
+    borderRadius: "5px",
   },
   NFTs: {
     display: "flex",

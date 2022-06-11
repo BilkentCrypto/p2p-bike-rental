@@ -11,7 +11,6 @@ import { Image, Layout } from "antd";
 import "antd/dist/antd.css";
 import "./style.css";
 import QuickStart from "components/QuickStart";
-import Text from "antd/lib/typography/Text";
 import MenuItems from "./components/MenuItems";
 import Renter from "./components/Renter";
 import Rentee from "./components/Rentee";
@@ -19,7 +18,7 @@ import Rentabike from "./Rentabike";
 import { styles } from "./helpers/styles";
 import DAO from "./components/DAO";
 const { Header, Footer } = Layout;
-import logo from "./assets/apple-touch-icon.png";
+import logo from "./assets/apple-touch-icon1.png";
 
 const App = () => {
   const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading } =
@@ -72,7 +71,13 @@ const App = () => {
           </Switch>
         </div>
         <Footer style={{ textAlign: "center" }}>
-          <a style={{ display: "block" }} href="https://twitter.com/blkntblockchain"> Bilkent Blockchain Society</a>
+          <a
+            style={{ display: "block" }}
+            href="https://twitter.com/blkntblockchain"
+          >
+            {" "}
+            Bilkent Blockchain Society
+          </a>
         </Footer>
       </Router>
     </Layout>
@@ -81,7 +86,7 @@ const App = () => {
 
 export const Logo = () => (
   <div style={{ display: "flex" }}>
-    <Image width={70} src={logo} />
+    <Image width={60} src={logo} />
   </div>
 );
 

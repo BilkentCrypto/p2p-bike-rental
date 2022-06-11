@@ -1,12 +1,11 @@
 import { Card } from "antd";
 import { useEffect, useState } from "react";
 import Web3Modal from "web3modal";
-import axios from "axios";
 import { userAddress } from "../config";
 import { ethers } from "ethers";
 import User from "../contracts/User.json";
 import { styles } from "../helpers/styles";
-
+import { Link } from "react-router-dom";
 // To-do Buy a Kit function
 
 export default function Renter() {
@@ -83,9 +82,11 @@ export default function Renter() {
           {" "}
           Bike's availability {rentals.isAvailable}
         </h4>
-        <button onClick={changeAvailability} style={{ color: "#000" }}>
+        <button onClick={changeAvailability} style={styles.button}>
           Change Availability
         </button>
+        <p> As a tutorial </p>
+        <Link to="/buykit"> Don't have a bike? </Link>
       </div>
     </Card>
   );

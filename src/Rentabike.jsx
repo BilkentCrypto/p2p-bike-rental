@@ -21,7 +21,7 @@ export default function Rentabike() {
   return (
     <Card
       style={styles.card}
-      title={<div style={styles.headerRentBike}>asdkfjaslfjsfklj</div>}
+      title={<div style={styles.header2}>asdkfjaslfjsfklj</div>}
     >
       <button>Confirm Ride</button>
       <h2> If confirmed, countdown started: </h2>
