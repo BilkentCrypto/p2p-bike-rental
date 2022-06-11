@@ -42,13 +42,6 @@ const styles = {
   },
 };
 
-const bikeProperty = {
-  id: "0",
-  name: "BMX",
-  price: "200",
-  year: "2020",
-};
-
 // To-do Buy a Kit function
 
 export default function Renter() {
