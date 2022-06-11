@@ -83,7 +83,7 @@ export default function Renter() {
           {" "}
           Bike's availability {rentals.isAvailable}
         </h4>
-        <button onClick={changeAvailability} style={{ color: "#000" }}>
+        <button onClick={changeAvailability} style={styles.button}>
           Change Availability
         </button>
       </div>

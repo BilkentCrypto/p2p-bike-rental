@@ -29,7 +29,7 @@ function MenuItems() {
         </NavLink>
       </Menu.Item>
       <Menu.Item key="/dao">
-        <NavLink to="/dao">👛 DAO</NavLink>
+        <NavLink to="/dao" style={styles.tabLink}>👛 DAO</NavLink>
       </Menu.Item>
     </Menu>
   );
