@@ -68,8 +68,8 @@ export default function QuickStart() {
               </Timeline.Item>
             </Timeline>
           </Card>
-         </Col>
-         <Col span={8}>
+        </Col>
+        <Col span={8}>
           <Card
             style={{ marginTop: "10px", ...styles.card }}
             title={
@@ -80,7 +80,6 @@ export default function QuickStart() {
           >
             <Timeline mode="left" style={styles.timeline}>
               <Timeline.Item dot="💿">
-
                 <h1 style={styles.text}> I want to verify to earn!</h1>
                 <Link to="/bearenter" style={styles.link}>
                   DAO Contributor!

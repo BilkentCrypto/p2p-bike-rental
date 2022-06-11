@@ -11,7 +11,6 @@ import { Image, Layout } from "antd";
 import "antd/dist/antd.css";
 import "./style.css";
 import QuickStart from "components/QuickStart";
-import Text from "antd/lib/typography/Text";
 import MenuItems from "./components/MenuItems";
 import Renter from "./components/Renter";
 import Rentee from "./components/Rentee";
@@ -72,7 +71,13 @@ const App = () => {
           </Switch>
         </div>
         <Footer style={{ textAlign: "center" }}>
-          <a style={{ display: "block" }} href="https://twitter.com/blkntblockchain"> Bilkent Blockchain Society</a>
+          <a
+            style={{ display: "block" }}
+            href="https://twitter.com/blkntblockchain"
+          >
+            {" "}
+            Bilkent Blockchain Society
+          </a>
         </Footer>
       </Router>
     </Layout>
