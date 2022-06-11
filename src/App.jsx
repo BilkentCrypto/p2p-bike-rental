@@ -72,7 +72,13 @@ const App = () => {
           </Switch>
         </div>
         <Footer style={{ textAlign: "center" }}>
-          <a style={{ display: "block" }} href="https://twitter.com/blkntblockchain"> Bilkent Blockchain Society</a>
+          <a
+            style={{ display: "block" }}
+            href="https://twitter.com/blkntblockchain"
+          >
+            {" "}
+            Bilkent Blockchain Society
+          </a>
         </Footer>
       </Router>
     </Layout>

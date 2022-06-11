@@ -9,16 +9,25 @@ const { Text } = Typography;
 export default function QuickStart() {
   return (
     <div>
-      <Row style={{margin: "auto"}}>
+      <Row style={{ margin: "auto" }}>
         <Col span={24} style={{ height: "100vh" }}>
-          <Card style={{...styles.card, width: "50%", height: "auto", margin: "auto" }}>
-            <h1 style={{...styles.text, fontSize: "20px" }}>Welcome to Riding Bikes, You Rider!{" "}</h1>
+          <Card
+            style={{
+              ...styles.card,
+              width: "50%",
+              height: "auto",
+              margin: "auto",
+            }}
+          >
+            <h1 style={{ ...styles.text, fontSize: "20px" }}>
+              Welcome to Riding Bikes, You Rider!{" "}
+            </h1>
             <p style={styles.text}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien
               faucibus et molestie ac feugiat sed lectus. Egestas quis ipsum
-              suspendisse ultrices gravida dictum. Sollicitudin ac orci phasellus
-              egestas tellus rutrum tellus.
+              suspendisse ultrices gravida dictum. Sollicitudin ac orci
+              phasellus egestas tellus rutrum tellus.
             </p>
           </Card>
         </Col>
@@ -72,8 +81,8 @@ export default function QuickStart() {
               </Timeline.Item>
             </Timeline>
           </Card>
-         </Col>
-         <Col span={8}>
+        </Col>
+        <Col span={8}>
           <Card
             style={{ marginTop: "10px", ...styles.card }}
             title={
@@ -84,7 +93,6 @@ export default function QuickStart() {
           >
             <Timeline mode="left" style={styles.timeline}>
               <Timeline.Item dot="💿">
-
                 <h1 style={styles.text}> I want to verify to earn!</h1>
                 <Link to="/bearenter" style={styles.link}>
                   DAO Contributor!
