@@ -24,9 +24,11 @@ function MenuItems() {
       <Menu.Item key="/bearentee">
         <NavLink to="/bearentee">👛 RENTEE</NavLink>
       </Menu.Item>
-
       <Menu.Item key="/bearenter">
         <NavLink to="/bearenter">👛 RENTER</NavLink>
+      </Menu.Item>
+      <Menu.Item key="/dao">
+        <NavLink to="/dao">👛 DAO</NavLink>
       </Menu.Item>
     </Menu>
   );

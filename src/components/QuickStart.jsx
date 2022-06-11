@@ -1,8 +1,6 @@
-import { Card, Timeline, Typography } from "antd";
-import React, { useMemo } from "react";
-import { useMoralis } from "react-moralis";
+import { Card, Col, Row, Timeline, Typography } from "antd";
+import React from "react";
 import { Link } from "react-router-dom";
-
 const { Text } = Typography;
 
 const styles = {
@@ -23,74 +21,86 @@ const styles = {
   },
 };
 
-export default function QuickStart({ isServerInfo }) {
-  const { Moralis } = useMoralis();
-
-  const isInchDex = useMemo(
-    () => (Moralis.Plugins?.oneInch ? true : false),
-    [Moralis.Plugins?.oneInch],
-  );
-
+export default function QuickStart() {
   return (
-    <div style={{ display: "flex", gap: "10px" }}>
-      <Card
-        style={styles.card}
-        title={
-          <>
-            📝 <Text strong>Rent a Bike</Text>
-          </>
-        }
-      >
-        <Timeline mode="left" style={styles.timeline}>
-          <Timeline.Item dot="📄">
-            <Text style={styles.text}>
-              <Link to="/bearentee"> Be a Rentee </Link>
-            </Text>
-          </Timeline.Item>
-        </Timeline>
-      </Card>
-      <div>
-        <Card
-          style={styles.card}
-          title={
-            <>
-              <Text strong>Be a renter(</Text>
-            </>
-          }
-        >
-          <Timeline mode="left" style={styles.timeline}>
-            <Timeline.Item dot="💿">
-              <Text style={styles.text}>
-                <Link to="/bearenter">Home</Link>
-              </Text>
-            </Timeline.Item>
-          </Timeline>
-        </Card>
-        <Card
-          style={{ marginTop: "10px", ...styles.card }}
-          title={
-            <>
-              📡 <Text strong> Become a Validator</Text>
-            </>
-          }
-        >
-          <Timeline mode="left" style={styles.timeline}>
-            <Timeline.Item dot="💿">
-              <Text style={styles.text}>
-                Download{" "}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://github.com/fatedier/frp/releases"
-                >
-                  frpc
-                </a>{" "}
-                and provide missing params in the <Text code>.env</Text> file
-              </Text>
-            </Timeline.Item>
-          </Timeline>
-        </Card>
-      </div>
+    <div>
+      <Row>
+        <Col span={24} style={{ height: "100vh" }}>
+          Welcome to Riding Bikes, You Rider{" "}
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien
+            faucibus et molestie ac feugiat sed lectus. Egestas quis ipsum
+            suspendisse ultrices gravida dictum. Sollicitudin ac orci phasellus
+            egestas tellus rutrum tellus.
+          </p>
+        </Col>
+      </Row>
+      <div id="more"></div>
+
+      <Row gutter={[8, 24]}>
+        <Col span={8}>
+          <Card
+            style={styles.card}
+            title={
+              <>
+                📝 <Text strong>I'm a Bike User</Text>
+              </>
+            }
+          >
+            <Timeline mode="left" style={styles.timeline}>
+              <Timeline.Item dot="📄">
+                <Text style={styles.text}>
+                  <h1> Check Available Bikes in my area</h1>
+                  <h3>
+                    {" "}
+                    The BMX bike (2.5km away) is waiting for you to ride it{" "}
+                  </h3>
+                  <Link to="/bearentee"> Rent Me! </Link>
+                </Text>
+              </Timeline.Item>
+            </Timeline>
+          </Card>
+        </Col>
+        <Col span={8}>
+          <Card
+            style={styles.card}
+            title={
+              <>
+                <Text strong>For Renter(</Text>
+              </>
+            }
+          >
+            <Timeline mode="left" style={styles.timeline}>
+              <Timeline.Item dot="💿">
+                <Text style={styles.text}>
+                  <h1> I want to check my bicycle's condition</h1>
+                  <Link to="/bearenter">Renter's Page</Link>
+                </Text>
+              </Timeline.Item>
+            </Timeline>
+          </Card>
+        </Col>
+        <Col span={8}>
+          <Card
+            style={{ marginTop: "10px", ...styles.card }}
+            title={
+              <>
+                📡 <Text strong> Validator's Info</Text>
+              </>
+            }
+          >
+            <Timeline mode="left" style={styles.timeline}>
+              <Timeline.Item dot="💿">
+                <Text style={styles.text}>
+                  <h1> I want to verify to earn!</h1>
+                  <Link to="/dao">DAO Contributor!</Link>
+                </Text>
+              </Timeline.Item>
+            </Timeline>
+          </Card>
+        </Col>
+      </Row>
     </div>
   );
 }

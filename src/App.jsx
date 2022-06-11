@@ -15,6 +15,8 @@ import Text from "antd/lib/typography/Text";
 import MenuItems from "./components/MenuItems";
 import Renter from "./components/Renter";
 import Rentee from "./components/Rentee";
+import Rentabike from "./Rentabike";
+import DAO from "./components/DAO";
 const { Header, Footer } = Layout;
 
 const styles = {
@@ -47,7 +49,7 @@ const styles = {
     fontWeight: "600",
   },
 };
-const App = ({ isServerInfo }) => {
+const App = () => {
   const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading } =
     useMoralis();
 
@@ -72,13 +74,19 @@ const App = ({ isServerInfo }) => {
         <div style={styles.content}>
           <Switch>
             <Route exact path="/quickstart">
-              <QuickStart isServerInfo={isServerInfo} />
+              <QuickStart />
             </Route>
             <Route path="/bearenter">
               <Renter />
             </Route>
             <Route path="/bearentee">
               <Rentee />
+            </Route>
+            <Route path="/rentabike">
+              <Rentabike />
+            </Route>
+            <Route path="/dao">
+              <DAO />
             </Route>
             <Route path="/">
               <Redirect to="/quickstart" />
@@ -91,10 +99,10 @@ const App = ({ isServerInfo }) => {
             </Route>
           </Switch>
         </div>
+        <Footer style={{ textAlign: "center" }}>
+          <a style={{ display: "block" }} href="https://twitter.com/blkntblockchain"> Bilkent Blockchain Society</a>
+        </Footer>
       </Router>
-      <Footer style={{ textAlign: "center" }}>
-        <Text style={{ display: "block" }}>Bilkent Blockchain</Text>
-      </Footer>
     </Layout>
   );
 };
