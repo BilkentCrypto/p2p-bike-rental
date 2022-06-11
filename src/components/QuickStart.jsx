@@ -66,6 +66,8 @@ export default function QuickStart({ isServerInfo }) {
             </Timeline.Item>
           </Timeline>
         </Card>
+      </div>
+      <div>
         <Card
           style={{ marginTop: "10px", ...styles.card }}
           title={

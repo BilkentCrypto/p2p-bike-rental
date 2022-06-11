@@ -39,7 +39,6 @@ function Rentee() {
     loadBicycles();
   }, []);
 
-  let price1;
   let bikes1 = [];
   async function loadBicycles() {
     const web3Modal = new Web3Modal({
