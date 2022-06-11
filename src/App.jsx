@@ -16,6 +16,7 @@ import MenuItems from "./components/MenuItems";
 import Renter from "./components/Renter";
 import Rentee from "./components/Rentee";
 import Rentabike from "./Rentabike";
+import DAO from "./components/DAO";
 const { Header, Footer } = Layout;
 
 const styles = {
@@ -84,6 +85,9 @@ const App = () => {
             <Route path="/rentabike">
               <Rentabike />
             </Route>
+            <Route path="/dao">
+              <DAO />
+            </Route>
             <Route path="/">
               <Redirect to="/quickstart" />
             </Route>
@@ -95,10 +99,10 @@ const App = () => {
             </Route>
           </Switch>
         </div>
+        <Footer style={{ textAlign: "center" }}>
+          <a style={{ display: "block" }} href="https://twitter.com/blkntblockchain"> Bilkent Blockchain Society</a>
+        </Footer>
       </Router>
-      <Footer style={{ textAlign: "center" }}>
-        <Text style={{ display: "block" }}>Bilkent Blockchain</Text>
-      </Footer>
     </Layout>
   );
 };
