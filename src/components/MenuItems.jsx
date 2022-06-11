@@ -23,11 +23,13 @@ function MenuItems() {
           👛 RENTEE
         </NavLink>
       </Menu.Item>
-
       <Menu.Item key="/bearenter">
         <NavLink to="/bearenter" style={styles.tabLink}>
           👛 RENTER
         </NavLink>
+      </Menu.Item>
+      <Menu.Item key="/dao">
+        <NavLink to="/dao">👛 DAO</NavLink>
       </Menu.Item>
     </Menu>
   );
