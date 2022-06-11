@@ -15,7 +15,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    color: '#fff',
+    color: "#fff",
     gap: "5px",
   },
   card: {
@@ -118,11 +118,16 @@ export default function Renter() {
       <div style={styles.header}>
         Hi {"  \n "}
         You have a kit, now:
-        <h1 style={{color: '#fff'}}> Your bicycle info: </h1>
-        <h2 style={{color: '#fff'}}> Do you wanna change it bro?</h2>
-        <h3 style={{color: '#fff'}}> Bike's Name {rentals[0]}</h3>
-        <h4 style={{color: '#fff'}}> Bike's availability {rentals.isAvailable}</h4>
-        <button onClick={changeAvailability} style={{color: '#000'}}>Change Availability</button>
+        <h1 style={{ color: "#fff" }}> Your bicycle info: </h1>
+        <h2 style={{ color: "#fff" }}> Do you wanna change it bro?</h2>
+        <h3 style={{ color: "#fff" }}> Bike's Name {rentals[0]}</h3>
+        <h4 style={{ color: "#fff" }}>
+          {" "}
+          Bike's availability {rentals.isAvailable}
+        </h4>
+        <button onClick={changeAvailability} style={{ color: "#000" }}>
+          Change Availability
+        </button>
       </div>
     </Card>
   );
