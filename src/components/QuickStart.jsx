@@ -19,37 +19,35 @@ export default function QuickStart() {
               margin: "auto",
             }}
           >
-            <h1 style={{ ...styles.text, fontSize: "20px", textAlign: "center" }}>
+            <h1
+              style={{ ...styles.text, fontSize: "20px", textAlign: "center" }}
+            >
               Welcome to P2P-Rent-Bike!{" "}
             </h1>
             <p style={styles.text}>
-              Rent a bike without giving your information to the central institutions. {" "}
+              Rent a bike without giving your information to the central
+              institutions.{" "}
             </p>
             <p style={styles.text}>
-              If you already have a bike, register with the system and earn money by sharing your bike. {" "} {" "}
+              If you already have a bike, register with the system and earn
+              money by sharing your bike.{" "}
             </p>
-            <p style={styles.text}>
-
-
-              {" "}
-            </p>
-            <h1 style={{ ...styles.text, fontSize: "20px", textAlign: "center" }}>
+            <p style={styles.text}> </p>
+            <h1
+              style={{ ...styles.text, fontSize: "20px", textAlign: "center" }}
+            >
               Explore fast!{" "}
             </h1>
             <p style={styles.text}>
               Click on the "Rentee" tab to see the nearest bikes.{" "}
             </p>
             <p style={styles.text}>
-              If you want other people to rent your bike,
-              you can join the network after entering the "Renter" tab
-              and buying a bike kit.
+              If you want other people to rent your bike, you can join the
+              network after entering the "Renter" tab and buying a bike kit.
             </p>
-
           </Card>
         </Col>
       </Row>
-
-
 
       <div id="more"></div>
 

@@ -1,16 +1,16 @@
-.ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item:hover::after,
-.ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu:hover::after,
-.ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-active::after,
-.ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-active::after,
-.ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-open::after,
-.ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-open::after,
-.ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-item-selected::after,
-.ant-menu-horizontal:not(.ant-menu-dark)>.ant-menu-submenu-selected::after {
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
   border-bottom: 0px solid #fff !important;
 }
 
-.ant-menu-horizontal>.ant-menu-item-selected a,
-.ant-menu-horizontal>.ant-menu-item a:hover {
+.ant-menu-horizontal > .ant-menu-item-selected a,
+.ant-menu-horizontal > .ant-menu-item a:hover {
   color: #fff !important;
 }
 
@@ -40,22 +40,41 @@
 }
 
 .ant-menu {
-
   /* ff 3.6+ */
-  background: -moz-linear-gradient(90deg, rgba(0, 0, 255, 1) 0%, rgba(172, 48, 172, 1) 100%);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(0, 0, 255, 1) 0%,
+    rgba(172, 48, 172, 1) 100%
+  );
 
   /* safari 5.1+,chrome 10+ */
-  background: -webkit-linear-gradient(90deg, rgba(0, 0, 255, 1) 0%, rgba(172, 48, 172, 1) 100%);
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(0, 0, 255, 1) 0%,
+    rgba(172, 48, 172, 1) 100%
+  );
 
   /* opera 11.10+ */
-  background: -o-linear-gradient(90deg, rgba(0, 0, 255, 1) 0%, rgba(172, 48, 172, 1) 100%);
+  background: -o-linear-gradient(
+    90deg,
+    rgba(0, 0, 255, 1) 0%,
+    rgba(172, 48, 172, 1) 100%
+  );
 
   /* ie 6-9 */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#AC30AC', endColorstr='#0000FF', GradientType=0);
 
   /* ie 10+ */
-  background: -ms-linear-gradient(90deg, rgba(0, 0, 255, 1) 0%, rgba(172, 48, 172, 1) 100%);
+  background: -ms-linear-gradient(
+    90deg,
+    rgba(0, 0, 255, 1) 0%,
+    rgba(172, 48, 172, 1) 100%
+  );
 
   /* global 94%+ browsers support */
-  background: linear-gradient(90deg, rgba(0, 0, 255, 1) 0%, rgba(172, 48, 172, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 255, 1) 0%,
+    rgba(172, 48, 172, 1) 100%
+  );
 }

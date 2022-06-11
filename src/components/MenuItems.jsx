@@ -35,9 +35,7 @@ function MenuItems() {
         </NavLink>
       </Menu.Item>
       <Menu.Item key="/authenticate">
-
         <Account />
-
       </Menu.Item>
     </Menu>
   );

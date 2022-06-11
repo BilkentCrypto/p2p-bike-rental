@@ -75,7 +75,11 @@ export default function Renter() {
       <div style={styles.headerRenter}>
         Hi {"  \n "}
         You have a kit, now you can add your bicycle on blockchain.
-        <h1 style={{ color: "#fff", textAlign: "center" }}> Enter the (V, R, S) information on the kit and other bike information below  </h1>
+        <h1 style={{ color: "#fff", textAlign: "center" }}>
+          {" "}
+          Enter the (V, R, S) information on the kit and other bike information
+          below{" "}
+        </h1>
         <h2 style={{ color: "#fff" }}></h2>
         <h3 style={{ color: "#fff" }}>
           {" "}
@@ -84,7 +88,6 @@ export default function Renter() {
         <form>
           <label>Bicycle Name:</label>
           <Input placeholder="bike name" />
-
         </form>
         <button onClick={changeAvailability} style={styles.button}>
           Change Availability
