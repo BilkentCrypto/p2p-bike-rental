@@ -15,6 +15,7 @@ import Text from "antd/lib/typography/Text";
 import MenuItems from "./components/MenuItems";
 import Renter from "./components/Renter";
 import Rentee from "./components/Rentee";
+import Rentabike from "./Rentabike";
 const { Header, Footer } = Layout;
 
 const styles = {
@@ -79,6 +80,9 @@ const App = ({ isServerInfo }) => {
             </Route>
             <Route path="/bearentee">
               <Rentee />
+            </Route>
+            <Route path="/rentabike">
+              <Rentabike />
             </Route>
             <Route path="/">
               <Redirect to="/quickstart" />

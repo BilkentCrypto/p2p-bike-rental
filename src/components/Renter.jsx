@@ -100,6 +100,8 @@ export default function Renter() {
   }
 
   console.log(rentals);
+  // this will be useful if the renter did not register the bike
+  //    const addBicycle = await contract.functions.addNewBicycle("testBike", "0x076c8831785a841f81d5e5e1f693c761beceb1b7", 5, 2000);
   if (loadingState === "loaded" && !rentals.length) {
     return (
       <Card style={styles.card}>
