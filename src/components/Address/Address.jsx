@@ -5,17 +5,7 @@ import Blockie from "../Blockie";
 import "./identicon.css";
 import { useMoralis } from "react-moralis";
 import { Skeleton } from "antd";
-
-const styles = {
-  address: {
-    height: "36px",
-    display: "flex",
-    gap: "5px",
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
-    borderRadius: "9px",
-    alignItems: "center",
-  },
-};
+import { styles } from "../../helpers/styles";
 
 function Address(props) {
   const { account, isAuthenticated } = useMoralis();
@@ -74,7 +64,7 @@ const Check = () => (
     height="24"
     viewBox="0 0 24 24"
     strokeWidth="3"
-    stroke="#21BF96"
+    stroke="#f37b68"
     fill="none"
     strokeLinecap="round"
     strokeLinejoin="round"

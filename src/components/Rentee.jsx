@@ -5,27 +5,7 @@ import { ethers } from "ethers";
 import { userAddress } from "../config";
 import User from "../contracts/User.json";
 import { Link } from "react-router-dom";
-
-const styles = {
-  title: {
-    fontSize: "30px",
-    fontWeight: "600",
-  },
-  header: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    gap: "5px",
-  },
-  card: {
-    boxShadow: "0 0.5rem 1.2rem rgb(189 197 209 / 20%)",
-    border: "1px solid #e7eaf3",
-    borderRadius: "1rem",
-    width: "450px",
-    fontSize: "16px",
-    fontWeight: "500",
-  },
-};
+import { styles } from "../helpers/styles"
 
 // To-do Buy a Kit function
 
@@ -79,7 +59,7 @@ function Rentee() {
   if (loadingState === "loaded" && !stake.length) {
     return (
       <Card style={styles.card}>
-        <div style={styles.header}>
+        <div style={styles.headerRentee}>
           Hi {"  \n "}
           Firstly, buy a kit
         </div>
@@ -88,7 +68,7 @@ function Rentee() {
   } else {
     return (
       <Card style={styles.card}>
-        <div style={styles.header}>
+        <div style={styles.headerRentee}>
           {bikes.length != 0 &&
             bikes.map((bike, index) => (
               <Card key={index}>

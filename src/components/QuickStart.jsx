@@ -1,30 +1,12 @@
 import { Card, Timeline, Typography } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { styles } from "../helpers/styles"
 const { Text } = Typography;
-
-const styles = {
-  title: {
-    fontSize: "20px",
-    fontWeight: "700",
-  },
-  text: {
-    fontSize: "16px",
-  },
-  card: {
-    background: "#2f3136",
-    boxShadow: "0 0.5rem 1.2rem rgb(189 197 209 / 20%)",
-    border: "1px solid #e7eaf3",
-    borderRadius: "0.5rem",
-  },
-  timeline: {
-    marginBottom: "-45px",
-  },
-};
 
 export default function QuickStart() {
   return (
+    <div style={{ width: '60%' }}>
     <div style={{ display: "flex", gap: "10px" }}>
       <Card
         style={styles.card}
@@ -36,11 +18,9 @@ export default function QuickStart() {
       >
         <Timeline mode="left" style={styles.timeline}>
           <Timeline.Item dot="📄">
-            <Text style={styles.text}>
-              <h1> Check Available Bikes in my area</h1>
-              <h3> The BMX bike (2.5km away) is waiting for you to ride it </h3>
-              <Link to="/bearentee"> Rent Me! </Link>
-            </Text>
+              <h1 style={styles.text}> Check Available Bikes in my area</h1>
+              <h3 style={styles.text}> The BMX bike (2.5km away) is waiting for you to ride it </h3>
+              <Link to="/bearentee" style={styles.link}> Rent Me! </Link>
           </Timeline.Item>
         </Timeline>
       </Card>
@@ -49,16 +29,14 @@ export default function QuickStart() {
           style={styles.card}
           title={
             <>
-              <Text strong>For Renter(</Text>
+              <Text strong>For Renter</Text>
             </>
           }
         >
           <Timeline mode="left" style={styles.timeline}>
             <Timeline.Item dot="💿">
-              <Text style={styles.text}>
-                <h1> I want to check my bicycle's condition</h1>
-                <Link to="/bearenter">Renter's Page</Link>
-              </Text>
+              <h1 style={styles.text}> I want to check my bicycle's condition</h1>
+              <Link to="/bearenter" style={styles.link}>Renter's Page</Link>
             </Timeline.Item>
           </Timeline>
         </Card>
@@ -74,14 +52,13 @@ export default function QuickStart() {
         >
           <Timeline mode="left" style={styles.timeline}>
             <Timeline.Item dot="💿">
-              <Text style={styles.text}>
-                <h1> I want to verify to earn!</h1>
-                <Link to="/bearenter">DAO Contributor!</Link>
-              </Text>
+                <h1 style={styles.text}> I want to verify to earn!</h1>
+                <Link to="/bearenter" style={styles.link}>DAO Contributor!</Link>
             </Timeline.Item>
           </Timeline>
         </Card>
       </div>
+    </div>
     </div>
   );
 }

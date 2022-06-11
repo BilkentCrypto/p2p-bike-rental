@@ -9,21 +9,9 @@ import {
 import { getExplorer } from "helpers/networks";
 import AddressInput from "./AddressInput";
 import { useVerifyMetadata } from "hooks/useVerifyMetadata";
+import { styles } from "helpers/styles";
 
 const { Meta } = Card;
-
-const styles = {
-  NFTs: {
-    display: "flex",
-    flexWrap: "wrap",
-    WebkitBoxPack: "start",
-    justifyContent: "flex-start",
-    margin: "0 auto",
-    maxWidth: "1000px",
-    width: "100%",
-    gap: "10px",
-  },
-};
 
 function NFTBalance() {
   const { data: NFTBalances } = useNFTBalances();
