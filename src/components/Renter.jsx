@@ -1,4 +1,4 @@
-import { Card } from "antd";
+import { Card, Input } from "antd";
 import { useEffect, useState } from "react";
 import Web3Modal from "web3modal";
 import { userAddress } from "../config";
@@ -74,14 +74,21 @@ export default function Renter() {
     <Card style={styles.card}>
       <div style={styles.headerRenter}>
         Hi {"  \n "}
-        You have a kit, now:
-        <h1 style={{ color: "#fff" }}> Your bicycle info: </h1>
-        <h2 style={{ color: "#fff" }}> Do you wanna change it bro?</h2>
-        <h3 style={{ color: "#fff" }}> Bike's Name {rentals[0]}</h3>
-        <h4 style={{ color: "#fff" }}>
+        You have a kit, now you can add your bicycle on blockchain.
+        <h1 style={{ color: "#fff", textAlign: "center" }}>
+          {" "}
+          Enter the (V, R, S) information on the kit and other bike information
+          below{" "}
+        </h1>
+        <h2 style={{ color: "#fff" }}></h2>
+        <h3 style={{ color: "#fff" }}>
           {" "}
           Bike's availability {rentals.isAvailable}
-        </h4>
+        </h3>
+        <form>
+          <label>Bicycle Name:</label>
+          <Input placeholder="bike name" />
+        </form>
         <button onClick={changeAvailability} style={styles.button}>
           Change Availability
         </button>
