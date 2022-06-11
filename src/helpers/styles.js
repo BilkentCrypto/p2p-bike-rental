@@ -43,19 +43,10 @@ export const styles = {
     borderRadius: "1rem",
     width: "450px",
   },
-  title: {
-    fontSize: "20px",
-    fontWeight: "700",
-  },
   text: {
     fontSize: "16px",
     color: "#fff",
     fontWeight: "400",
-  },
-  card: {
-    background: "#212124",
-    border: "1px solid #46464D",
-    borderRadius: "1rem",
   },
   timeline: {
     marginBottom: "-45px",

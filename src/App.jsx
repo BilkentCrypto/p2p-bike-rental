@@ -19,7 +19,7 @@ import Rentabike from "./Rentabike";
 import { styles } from "./helpers/styles";
 import DAO from "./components/DAO";
 const { Header, Footer } = Layout;
-import logo from "./assets/apple-touch-icon.png";
+import logo from "./assets/apple-touch-icon1.png";
 
 const App = () => {
   const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading } =
@@ -87,7 +87,7 @@ const App = () => {
 
 export const Logo = () => (
   <div style={{ display: "flex" }}>
-    <Image width={70} src={logo} />
+    <Image width={60} src={logo} />
   </div>
 );
 
