@@ -5,41 +5,7 @@ import { useEffect, useState } from "react";
 import { useMoralis } from "react-moralis";
 import AddressInput from "../../AddressInput";
 import AssetSelector from "./AssetSelector";
-
-const styles = {
-  card: {
-    alignItems: "center",
-    width: "100%",
-  },
-  header: {
-    textAlign: "center",
-  },
-  input: {
-    width: "100%",
-    outline: "none",
-    fontSize: "16px",
-    whiteSpace: "nowrap",
-    overflow: "hidden",
-    textverflow: "ellipsis",
-    appearance: "textfield",
-    color: "#041836",
-    fontWeight: "700",
-    border: "none",
-    backgroundColor: "transparent",
-  },
-  select: {
-    marginTop: "20px",
-    display: "flex",
-    alignItems: "center",
-  },
-  textWrapper: { maxWidth: "80px", width: "100%" },
-  row: {
-    display: "flex",
-    alignItems: "center",
-    gap: "10px",
-    flexDirection: "row",
-  },
-};
+import { styles } from "../../helpers/styles";
 
 function Transfer() {
   const { Moralis } = useMoralis();
@@ -118,9 +84,9 @@ function Transfer() {
   }
 
   return (
-    <div style={styles.card}>
+    <div style={styles.cardTransfer}>
       <div style={styles.tranfer}>
-        <div style={styles.header}>
+        <div style={styles.headerTransfer}>
           <h3>Transfer Assets</h3>
         </div>
         <div style={styles.select}>

@@ -1,18 +1,7 @@
 import { useState } from "react";
 import { useTokenPrice } from "react-moralis";
+import { styles } from "../helpers/styles";
 
-const styles = {
-  token: {
-    padding: "0 7px",
-    height: "42px",
-    gap: "5px",
-    width: "fit-content",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    whiteSpace: "nowrap",
-  },
-};
 function TokenPrice(props) {
   const { data: formattedData } = useTokenPrice(props);
 

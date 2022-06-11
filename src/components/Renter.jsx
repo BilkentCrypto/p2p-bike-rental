@@ -1,44 +1,11 @@
 import { Card } from "antd";
 import { useEffect, useState } from "react";
 import Web3Modal from "web3modal";
-
+import axios from "axios";
 import { userAddress } from "../config";
 import { ethers } from "ethers";
 import User from "../contracts/User.json";
-
-const styles = {
-  title: {
-    fontSize: "30px",
-    fontWeight: "600",
-  },
-  header: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    gap: "5px",
-  },
-  card: {
-    boxShadow: "0 0.5rem 1.2rem rgb(189 197 209 / 20%)",
-    border: "1px solid #e7eaf3",
-    borderRadius: "1rem",
-    width: "450px",
-    fontSize: "16px",
-    fontWeight: "500",
-  },
-  item: {
-    display: "flex",
-    alignItems: "center",
-    height: "42px",
-    fontWeight: "500",
-    fontFamily: "Roboto, sans-serif",
-    fontSize: "14px",
-    padding: "0 10px",
-  },
-  button: {
-    border: "2px solid rgb(231, 234, 243)",
-    borderRadius: "12px",
-  },
-};
+import { styles } from "../helpers/styles";
 
 // To-do Buy a Kit function
 
@@ -97,7 +64,7 @@ export default function Renter() {
   if (loadingState === "loaded" && !rentals.length) {
     return (
       <Card style={styles.card}>
-        <div style={styles.header}>
+        <div style={styles.headerRenter}>
           Hi {"  \n "}
           Firstly, buy a kit
         </div>
@@ -106,14 +73,19 @@ export default function Renter() {
   }
   return (
     <Card style={styles.card}>
-      <div style={styles.header}>
+      <div style={styles.headerRenter}>
         Hi {"  \n "}
         You have a kit, now:
-        <h1> Your bicycle info: </h1>
-        <h2> Do you wanna change it bro?</h2>
-        <h3> Bike's Name {rentals[0]}</h3>
-        <h4> Bike's availability {rentals.isAvailable}</h4>
-        <button onClick={changeAvailability}> Change Availability</button>
+        <h1 style={{ color: "#fff" }}> Your bicycle info: </h1>
+        <h2 style={{ color: "#fff" }}> Do you wanna change it bro?</h2>
+        <h3 style={{ color: "#fff" }}> Bike's Name {rentals[0]}</h3>
+        <h4 style={{ color: "#fff" }}>
+          {" "}
+          Bike's availability {rentals.isAvailable}
+        </h4>
+        <button onClick={changeAvailability} style={{ color: "#000" }}>
+          Change Availability
+        </button>
       </div>
     </Card>
   );

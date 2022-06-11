@@ -6,15 +6,34 @@
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after,
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after,
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
-  border-bottom: 2px solid #21bf96 !important;
+  border-bottom: 2px solid #fff !important;
 }
 
 .ant-menu-horizontal > .ant-menu-item-selected a,
 .ant-menu-horizontal > .ant-menu-item a:hover {
-  color: #21bf96 !important;
+  color: #fff !important;
 }
 
 .ant-modal-content {
   overflow: auto;
   border-radius: 1rem;
+}
+
+.ant-layout {
+  background: #161618;
+}
+
+.ant-layout-footer {
+  background: #161618;
+}
+
+.ant-typography {
+  color: rgba(255, 255, 255, 0.85);
+}
+.ant-timeline-item-head {
+  background: #212124;
+}
+
+.ant-menu {
+  background: #000;
 }

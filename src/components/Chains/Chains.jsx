@@ -3,22 +3,7 @@ import { Menu, Dropdown, Button } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import { AvaxLogo, PolygonLogo, BSCLogo, ETHLogo } from "./Logos";
 import { useChain, useMoralis } from "react-moralis";
-
-const styles = {
-  item: {
-    display: "flex",
-    alignItems: "center",
-    height: "42px",
-    fontWeight: "500",
-    fontFamily: "Roboto, sans-serif",
-    fontSize: "14px",
-    padding: "0 10px",
-  },
-  button: {
-    border: "2px solid rgb(231, 234, 243)",
-    borderRadius: "12px",
-  },
-};
+import { styles } from "../../helpers/styles";
 
 const menuItems = [
   {
