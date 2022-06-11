@@ -5,7 +5,7 @@ import { ethers } from "ethers";
 import { userAddress } from "../config";
 import User from "../contracts/User.json";
 import { Link } from "react-router-dom";
-import { styles } from "../helpers/styles"
+import { styles } from "../helpers/styles";
 
 // To-do Buy a Kit function
 

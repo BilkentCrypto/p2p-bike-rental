@@ -5,7 +5,7 @@ import axios from "axios";
 import { userAddress } from "../config";
 import { ethers } from "ethers";
 import User from "../contracts/User.json";
-import { styles } from "../helpers/styles"
+import { styles } from "../helpers/styles";
 
 // To-do Buy a Kit function
 
