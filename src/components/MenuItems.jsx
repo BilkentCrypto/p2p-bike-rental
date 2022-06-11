@@ -3,6 +3,7 @@ import { Menu } from "antd";
 import { NavLink } from "react-router-dom";
 import { styles } from "../helpers/styles";
 
+import Account from "components/Account/Account";
 function MenuItems() {
   const { pathname } = useLocation();
 
@@ -20,18 +21,23 @@ function MenuItems() {
       </Menu.Item>
       <Menu.Item key="/bearentee">
         <NavLink to="/bearentee" style={styles.tabLink}>
-          👛 RENTEE
+          🚴 Rentee
         </NavLink>
       </Menu.Item>
       <Menu.Item key="/bearenter">
         <NavLink to="/bearenter" style={styles.tabLink}>
-          👛 RENTER
+          🚴 Renter
         </NavLink>
       </Menu.Item>
       <Menu.Item key="/dao">
         <NavLink to="/dao" style={styles.tabLink}>
-          👛 DAO
+          🌐 VDAO
         </NavLink>
+      </Menu.Item>
+      <Menu.Item key="/authenticate">
+
+        <Account />
+
       </Menu.Item>
     </Menu>
   );

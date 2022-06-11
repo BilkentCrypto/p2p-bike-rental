@@ -6,8 +6,7 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import Account from "components/Account/Account";
-import { Image, Layout } from "antd";
+import { Layout } from "antd";
 import "antd/dist/antd.css";
 import "./style.css";
 import QuickStart from "components/QuickStart";
@@ -18,7 +17,6 @@ import Rentabike from "./Rentabike";
 import { styles } from "./helpers/styles";
 import DAO from "./components/DAO";
 const { Header, Footer } = Layout;
-import logo from "./assets/apple-touch-icon1.png";
 
 const App = () => {
   const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading } =
@@ -35,11 +33,7 @@ const App = () => {
     <Layout style={{ height: "100vh", overflow: "auto" }}>
       <Router>
         <Header style={styles.header}>
-          <Logo />
           <MenuItems />
-          <div style={styles.headerRight}>
-            <Account />
-          </div>
         </Header>
 
         <div style={styles.content}>
@@ -83,11 +77,4 @@ const App = () => {
     </Layout>
   );
 };
-
-export const Logo = () => (
-  <div style={{ display: "flex" }}>
-    <Image width={60} src={logo} />
-  </div>
-);
-
 export default App;
