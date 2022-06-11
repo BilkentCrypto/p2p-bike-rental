@@ -2,7 +2,6 @@ import { Card } from "antd";
 import { useEffect, useState } from "react";
 import Web3Modal from "web3modal";
 import axios from "axios";
-
 import { userAddress } from "../config";
 import { ethers } from "ethers";
 import User from "../contracts/User.json";
@@ -16,9 +15,11 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    color: '#fff',
     gap: "5px",
   },
   card: {
+    background: "#2f3136",
     boxShadow: "0 0.5rem 1.2rem rgb(189 197 209 / 20%)",
     border: "1px solid #e7eaf3",
     borderRadius: "1rem",
@@ -117,11 +118,11 @@ export default function Renter() {
       <div style={styles.header}>
         Hi {"  \n "}
         You have a kit, now:
-        <h1> Your bicycle info: </h1>
-        <h2> Do you wanna change it bro?</h2>
-        <h3> Bike's Name {rentals[0]}</h3>
-        <h4> Bike's availability {rentals.isAvailable}</h4>
-        <button onClick={changeAvailability}> Change Availability</button>
+        <h1 style={{color: '#fff'}}> Your bicycle info: </h1>
+        <h2 style={{color: '#fff'}}> Do you wanna change it bro?</h2>
+        <h3 style={{color: '#fff'}}> Bike's Name {rentals[0]}</h3>
+        <h4 style={{color: '#fff'}}> Bike's availability {rentals.isAvailable}</h4>
+        <button onClick={changeAvailability} style={{color: '#000'}}>Change Availability</button>
       </div>
     </Card>
   );
