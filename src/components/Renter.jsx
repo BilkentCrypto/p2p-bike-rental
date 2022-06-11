@@ -1,7 +1,6 @@
 import { Card } from "antd";
 import { useEffect, useState } from "react";
 import Web3Modal from "web3modal";
-import axios from "axios";
 
 import { userAddress } from "../config";
 import { ethers } from "ethers";
@@ -39,13 +38,6 @@ const styles = {
     border: "2px solid rgb(231, 234, 243)",
     borderRadius: "12px",
   },
-};
-
-const bikeProperty = {
-  id: "0",
-  name: "BMX",
-  price: "200",
-  year: "2020",
 };
 
 // To-do Buy a Kit function

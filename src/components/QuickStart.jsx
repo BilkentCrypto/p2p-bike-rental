@@ -29,14 +29,16 @@ export default function QuickStart() {
         style={styles.card}
         title={
           <>
-            📝 <Text strong>Rent a Bike</Text>
+            📝 <Text strong>I'm a Bike User</Text>
           </>
         }
       >
         <Timeline mode="left" style={styles.timeline}>
           <Timeline.Item dot="📄">
             <Text style={styles.text}>
-              <Link to="/bearentee"> Be a Rentee </Link>
+              <h1> Check Available Bikes in my area</h1>
+              <h3> The BMX bike (2.5km away) is waiting for you to ride it </h3>
+              <Link to="/bearentee"> Rent Me! </Link>
             </Text>
           </Timeline.Item>
         </Timeline>
@@ -46,14 +48,15 @@ export default function QuickStart() {
           style={styles.card}
           title={
             <>
-              <Text strong>Be a renter(</Text>
+              <Text strong>For Renter(</Text>
             </>
           }
         >
           <Timeline mode="left" style={styles.timeline}>
             <Timeline.Item dot="💿">
               <Text style={styles.text}>
-                <Link to="/bearenter">Home</Link>
+                <h1> I want to check my bicycle's condition</h1>
+                <Link to="/bearenter">Renter's Page</Link>
               </Text>
             </Timeline.Item>
           </Timeline>
@@ -64,22 +67,15 @@ export default function QuickStart() {
           style={{ marginTop: "10px", ...styles.card }}
           title={
             <>
-              📡 <Text strong> Become a Validator</Text>
+              📡 <Text strong> Validator's Info</Text>
             </>
           }
         >
           <Timeline mode="left" style={styles.timeline}>
             <Timeline.Item dot="💿">
               <Text style={styles.text}>
-                Download{" "}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://github.com/fatedier/frp/releases"
-                >
-                  frpc
-                </a>{" "}
-                and provide missing params in the <Text code>.env</Text> file
+                <h1> I want to verify to earn!</h1>
+                <Link to="/bearenter">DAO Contributor!</Link>
               </Text>
             </Timeline.Item>
           </Timeline>
