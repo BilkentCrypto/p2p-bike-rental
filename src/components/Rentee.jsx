@@ -4,7 +4,7 @@ import Web3Modal from "web3modal";
 import { ethers } from "ethers";
 import { userAddress } from "../config";
 import User from "../contracts/User.json";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const styles = {
   title: {
@@ -28,7 +28,6 @@ const styles = {
 };
 
 // To-do Buy a Kit function
-
 
 function Rentee() {
   // List all the bikes
@@ -61,17 +60,18 @@ function Rentee() {
       }
       console.log("no available");
     }
-    const items = await Promise.all( bikes1 && bikes1.map(
-        async i => {
+    const items = await Promise.all(
+      bikes1 &&
+        bikes1.map(async (i) => {
           const bicycleInfo = await contract.functions.rentals(i);
           console.log("isavail", bicycleInfo.isAvailable);
           let item = {
             name: bicycleInfo[0],
             isAvailable: bicycleInfo.isAvailable,
-          }
+          };
           return item;
-        }
-    ))
+        }),
+    );
     setBikes(items);
     setStake(bicycleCount);
     setLoadingState("loaded");
@@ -93,7 +93,7 @@ function Rentee() {
           {bikes.length != 0 &&
             bikes.map((bike, index) => (
               <Card key={index}>
-                <h1 > {bike.name} </h1>
+                <h1> {bike.name} </h1>
                 <h2> {bike.isAvailable}</h2>
                 <Link to="/rentabike"> Rent a Bike </Link>
               </Card>
