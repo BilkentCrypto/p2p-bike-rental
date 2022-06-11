@@ -61,7 +61,7 @@ function Rentee() {
       <Card style={styles.card}>
         <div style={styles.headerRentee}>
           Hi {"  \n "}
-          Firstly, buy a kit
+          No bikes available/stake error
         </div>
       </Card>
     );
