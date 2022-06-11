@@ -37,3 +37,7 @@
 .ant-menu {
   background: #000;
 }
+
+.ant-modal-content {
+  background: #353535;
+}

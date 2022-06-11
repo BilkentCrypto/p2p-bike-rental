@@ -41,6 +41,7 @@ function Account() {
               justifyContent: "center",
               fontWeight: "700",
               fontSize: "20px",
+              color: "#fff",
             }}
           >
             Connect Wallet
