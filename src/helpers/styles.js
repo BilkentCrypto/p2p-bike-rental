@@ -43,6 +43,13 @@ export const styles = {
     borderRadius: "1rem",
     width: "450px",
   },
+  headerRentBike: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    gap: "5px",
+
+  },
   text: {
     fontSize: "16px",
     color: "#fff",
