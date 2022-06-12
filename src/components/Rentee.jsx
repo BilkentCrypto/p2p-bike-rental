@@ -61,7 +61,7 @@ function Rentee() {
       <Card style={styles.card}>
         <div style={styles.headerRentee}>
           Hi {"  \n "}
-          Firstly, buy a kit
+          No bikes available/stake error
         </div>
       </Card>
     );
@@ -69,11 +69,21 @@ function Rentee() {
     return (
       <Card style={styles.card}>
         <div style={styles.headerRentee}>
+          <div>
+            <h1 style={styles.text}>
+              {" "}
+              All available bicycles to ride are as follows:{" "}
+            </h1>
+            <h5 style={styles.text}>
+              {" "}
+              (Information fetched from the smart contract){" "}
+            </h5>
+          </div>
           {bikes.length != 0 &&
             bikes.map((bike, index) => (
-              <Card key={index}>
-                <h1> {bike.name} </h1>
-                <h2> {bike.isAvailable}</h2>
+              <Card key={index} style={styles.card1}>
+                <h1> Name: {bike.name + " " + index} </h1>
+                <h5> {bike.isAvailable && "available"}</h5>
                 <Link to="/rentabike"> Rent a Bike </Link>
               </Card>
             ))}

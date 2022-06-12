@@ -1,4 +1,3 @@
-import { AlignCenterOutlined } from "@ant-design/icons";
 import { Card, Col, Row, Timeline, Typography } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -19,39 +18,57 @@ export default function QuickStart() {
               margin: "auto",
             }}
           >
-            <h1 style={{ ...styles.text, fontSize: "20px" }}>
-              Welcome to Riding Bikes, You Rider!{" "}
+            <h1
+              style={{ ...styles.text, fontSize: "20px", textAlign: "center" }}
+            >
+              Welcome to P2P-Rent-Bike!{" "}
             </h1>
             <p style={styles.text}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien
-              faucibus et molestie ac feugiat sed lectus. Egestas quis ipsum
-              suspendisse ultrices gravida dictum. Sollicitudin ac orci
-              phasellus egestas tellus rutrum tellus.
+              Rent a bike without giving your information to the central
+              institutions.{" "}
+            </p>
+            <p style={styles.text}>
+              If you already have a bike, register with the system and earn
+              money by sharing your bike.{" "}
+            </p>
+            <p style={styles.text}> </p>
+            <h1
+              style={{ ...styles.text, fontSize: "20px", textAlign: "center" }}
+            >
+              Explore fast!{" "}
+            </h1>
+            <p style={styles.text}>
+              Click on the "Rentee" tab to see the nearest bikes.{" "}
+            </p>
+            <p style={styles.text}>
+              If you want other people to rent your bike, you can join the
+              network after entering the "Renter" tab and buying a bike kit.
             </p>
           </Card>
         </Col>
       </Row>
-
       <div id="more"></div>
-
       <Row gutter={[8, 24]}>
-        <Col span={8} style={{ height: "60vh" }}>
+        <Col span={8}>
           <Card
             style={styles.card}
             title={
               <>
-                📝 <Text strong>I'm a Bike User</Text>
+                <Text strong>I wanna ride a bike!</Text>
               </>
             }
           >
             <Timeline mode="left" style={styles.timeline}>
-              <Timeline.Item dot="📄">
-                <h1 style={styles.text}> Check Available Bikes in my area</h1>
+              <Timeline.Item dot="🔎">
+                <h3 style={styles.text}> Check Available Bikes in my area</h3>
+              </Timeline.Item>
+              <Timeline.Item dot="🚲">
                 <h3 style={styles.text}>
                   {" "}
                   The BMX bike (2.5km away) is waiting for you to ride it{" "}
                 </h3>
+              </Timeline.Item>
+              <Timeline.Item dot="✅">
                 <Link to="/bearentee" style={styles.link}>
                   {" "}
                   Rent Me!{" "}
@@ -65,16 +82,18 @@ export default function QuickStart() {
             style={styles.card}
             title={
               <>
-                <Text strong>For Renter</Text>
+                <Text strong>I wanna rent my bike!</Text>
               </>
             }
           >
             <Timeline mode="left" style={styles.timeline}>
-              <Timeline.Item dot="💿">
-                <h1 style={styles.text}>
-                  {" "}
-                  I want to check my bicycle's condition
-                </h1>
+              <Timeline.Item dot="🚲">
+                <h3 style={styles.text}> Change bicycle's availability</h3>
+              </Timeline.Item>
+              <Timeline.Item dot="✅">
+                <h3 style={styles.text}> Check bicycle's condition</h3>
+              </Timeline.Item>
+              <Timeline.Item dot="💲">
                 <Link to="/bearenter" style={styles.link}>
                   Renter's Page
                 </Link>
@@ -84,7 +103,7 @@ export default function QuickStart() {
         </Col>
         <Col span={8}>
           <Card
-            style={{ marginTop: "10px", ...styles.card }}
+            style={styles.card}
             title={
               <>
                 📡 <Text strong> Validator's Info</Text>
@@ -92,8 +111,13 @@ export default function QuickStart() {
             }
           >
             <Timeline mode="left" style={styles.timeline}>
-              <Timeline.Item dot="💿">
-                <h1 style={styles.text}> I want to verify to earn!</h1>
+              <Timeline.Item dot="✍️">
+                <h3 style={styles.text}> I want to verify to earn!</h3>
+              </Timeline.Item>
+              <Timeline.Item dot="⬇️">
+                <h3 style={styles.text}> Stake to join the pool!</h3>
+              </Timeline.Item>
+              <Timeline.Item dot="✅">
                 <Link to="/bearenter" style={styles.link}>
                   DAO Contributor!
                 </Link>

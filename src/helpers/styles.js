@@ -5,7 +5,7 @@ export const styles = {
     fontFamily: "Helvetica, sans-serif",
     color: "#fff",
     marginTop: "130px",
-    padding: "10px",
+    padding: "0 10px",
   },
   header: {
     position: "fixed",
@@ -17,7 +17,7 @@ export const styles = {
     alignItems: "center",
     fontFamily: "Helvetica, sans-serif",
     borderBottom: "2px solid rgba(0, 0, 0, 0.06)",
-    padding: "0 10px",
+    // padding: "0 10px",
     boxShadow: "0 1px 10px rgb(151 164 175 / 10%)",
   },
   header2: {
@@ -25,6 +25,14 @@ export const styles = {
     flexDirection: "column",
     alignItems: "center",
     gap: "5px",
+    color: "#fff",
+  },
+  header4: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    gap: "5px",
+    color: "#fff",
   },
   headerRight: {
     display: "flex",
@@ -41,14 +49,19 @@ export const styles = {
     background: "#212124",
     border: "1px solid #46464D",
     borderRadius: "1rem",
-    width: "450px",
+    alignItems: "center",
+  },
+  card1: {
+    background: "#9E4B9EFF",
+    border: "1px solid #46464D",
+    borderRadius: "1rem",
+    alignItems: "center",
   },
   headerRentBike: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     gap: "5px",
-
   },
   text: {
     fontSize: "16px",
@@ -127,6 +140,13 @@ export const styles = {
     background: "#4D516B",
     border: "1px solid #8EA8D4",
     borderRadius: "5px",
+  },
+  buttonCustom: {
+    color: "#fff",
+    background: "#4D516B",
+    border: "1px solid #8EA8D4",
+    borderRadius: "5px",
+    alignItems: "center",
   },
   NFTs: {
     display: "flex",

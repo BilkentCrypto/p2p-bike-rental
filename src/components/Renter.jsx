@@ -73,20 +73,17 @@ export default function Renter() {
   return (
     <Card style={styles.card}>
       <div style={styles.headerRenter}>
-        Hi {"  \n "}
-        You have a kit, now:
-        <h1 style={{ color: "#fff" }}> Your bicycle info: </h1>
-        <h2 style={{ color: "#fff" }}> Do you wanna change it bro?</h2>
-        <h3 style={{ color: "#fff" }}> Bike's Name {rentals[0]}</h3>
-        <h4 style={{ color: "#fff" }}>
-          {" "}
-          Bike's availability {rentals.isAvailable}
-        </h4>
+        Your bike's Info:
+        <h1 style={styles.header2}> Name: {rentals[0]} </h1>
+        <h4 style={styles.header4}> Available: {rentals.isAvailable + " "}</h4>
+        <h4 style={styles.header4}> (You might need to refresh that)</h4>
+        <br />
         <button onClick={changeAvailability} style={styles.button}>
           Change Availability
         </button>
-        <p> As a tutorial </p>
-        <Link to="/buykit"> Don't have a bike? </Link>
+        <br />
+        <p> Also, for tutorial purposes: </p>
+        <Link to="/buykit"> Want to add your bike? </Link>
       </div>
     </Card>
   );
