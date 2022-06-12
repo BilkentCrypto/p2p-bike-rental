@@ -1,5 +1,6 @@
-# P2P-Bike-Rent
-
+# P2P Bike Rent
+Rent other people's bikes. Stay anonymous, help the urbanism movement. Join VDAO, stake and start earning with "verify2earn"! Not using your bike currently? - Earn extra crypto
+<br />
 **It is a dApp that allows users to rent bikes over the rinkeby test network without providing any personal data,
 and allows people with bikes to share their bikes with other people and earn money.**
 
