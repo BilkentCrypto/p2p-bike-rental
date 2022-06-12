@@ -11,7 +11,7 @@ import "antd/dist/antd.css";
 import "./style.css";
 import QuickStart from "components/QuickStart";
 import MenuItems from "./components/MenuItems";
-import Renter from "./components/Renter";
+import Rentor from "./components/Rentor";
 import Rentee from "./components/Rentee";
 import Rentabike from "./components/Rentabike";
 import { styles } from "./helpers/styles";
@@ -42,8 +42,8 @@ const App = () => {
             <Route exact path="/quickstart">
               <QuickStart />
             </Route>
-            <Route path="/bearenter">
-              <Renter />
+            <Route path="/bearentor">
+              <Rentor />
             </Route>
             <Route path="/bearentee">
               <Rentee />

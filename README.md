@@ -1,46 +1,54 @@
-# P2P-Bike-Rent
+# P2P Bike Rent
 
-**It is a dApp that allows users to rent bikes over the rinkeby test network without providing any personal data,
-and allows people with bikes to share their bikes with other people and earn money.**
+Rent other people's bikes. Stay anonymous, help the urbanism movement. Join VDAO, stake and start earning with "verify2earn"! Not using your bike currently? - Earn extra crypto
+<br />
+**P2P Bike Rent provides an opportunity for users to rent bikes without providing any personal data. It
+also allows people to share their bikes and earn money. Lastly, it allows people to earn extra income by joining the Validator Network and Verify2Earn**
 
 [Rental Contract](https://rinkeby.etherscan.io/address/0x912c973E6A3DAdaee3FBDe072052d627Ece6829B).
-[VDAO Contract](https://rinkeby.etherscan.io/address/0x07980Fae9E884c5C72C98cBDf40e0aD70739FFac).
-[P2P-Rent-Bicycle-Website](https://p2p-bike-rental.vercel.app/quickstart).
+<br />
+[VDAO Contract](https://rinkeby.etherscan.io/address/0x07980Fae9E884c5C72C98cBDf40e0aD70739FFac). <br />
+[P2P-Rent-Bicycle-Website](https://p2p-bike-rental.vercel.app/quickstart). <br />
 
 ​
+
 ## Introduction
- 
+
 ## Bike-Kit
+
 ​
-The user who wants to rent his bike should first buy a bike-kit, this is a bike hardware that includes a screen and gps. 
-When this user opens the kit, the kit creates an Ethereum address and generates 3 uniquie numbers from this private key 
-(V-R-S) using ECDS. The reason we use this method is because the owner of the bike should not know the private key of the bike account [ECDS](SignedMessageVerifier).
+To Start, Rentors should first buy a bike-kit, a custom hardware that includes led screen and gps and a automatic locker. The screen will be used to generate randomized qr codes [QRCodes](https://github.com/BilkentCrypto/p2p-bike-rental/tree/qrcode-scanner/QR_Code_Scanner) <br />
+Upon opening the kit, the kit creates an Ethereum address and generates 3 unique numbers from this private key
+(V-R-S) using ECDS. The reason we use this method is because the owner of the bike should not know the private key of the bike/kit's account [ECDS](https://github.com/BilkentCrypto/p2p-bike-rental/tree/signed-message-verifier/SignedMessageVerifier).
 ​
 
-## Renter
+## Rentor
+
 ​
-The user who buys the kit interacts with the smart contract and adds the V-R-S values, the bike model,
+Rentor nteracts with the smart contract and adds the V-R-S values, the bike model,
 the year of the bike model, bike's account,the price of the bike and the price per minute of the bike [Rental](src/contract/Rental.sol).
 ​
 
-## Rentee
+## Renteer/Rentee
+
 ​
-The user who wants to rent a bike can see all the available bikes and the features of these bikes.
-In order to rent the bike he wants, he locks the ethereum to the system as a deposit as much as the bike's value 
-(it is a precaution in case the bike is stolen or damaged, and VDAO makes this decision), if there is no problem with the bike, he gets his money back. 
-The renter of the bike can lock the bike after paying the required fee [Rental](src/contract/Rental.sol).
+A bike rentee can see all the available bikes and the features of these bikes in the area.
+In order to rent the selected bike, a certain amount (i.e. ~deposit), equal to the bike's value, is locked in the system as stake
+(Precaution in case the bike is stolen or damaged, decision done by VDAO). if(!problemwiththeBike) -> lock is opened but unstake is optional.
+The fee for the ride is taken according to the time of use. Can be static (default value) or (feature) set by the rentor.[Rental](src/contract/Rental.sol).
 ​
 
 ## VDAO (Verifer DAO)
+
 ​
-We developed VDAO because it is necessary to prevent the renter from causing any damage to the bike 
-and the system that controls this system should be a decentralized system. the person who rents the bike 
-takes a photo of the bike and sends it to VDAO [VDAO](src/contract/VDAO.sol). Those who want to approve this photo and earn money can be 
-included in the system by giving 0.1 ether for now. This money is sent to the owner of the bike,[Rental](src/contract/Rental.sol) and those 
-who answer incorrectly are punished with a serious penalty such as 30% cut off. ![Graph](assets/VDAO.png)
+We developed VDAO because it is necessary to prevent the renter from causing any damage to the bike (and worse, get away with it). Furthermore, the system that controls/makes the decisions about returned bikes and their XP status must be decentralized. <br />
+The rentee takes a photo of the bike, submits it to the system. The files are stored in IPFS and the links are sent to VDAO [VDAO](src/contract/VDAO.sol). The smart contract randomly chooses the validators. Validators can be
+included in the system by staking 0.1 ether for now. After receiving a "validate" notification, validator checks if the bicycle has any problems comparing it with a previous photo. Upon verification, 80% the renter's money is sent to the owner of the bike,[Rental](src/contract/Rental.sol) 20% are transferred to the stake pool and distributed to the validators. <br />
+Lastly, those who answer incorrectly are punished with a serious penalty ~ 30% cut. ![Graph](assets/VDAO.png)
 ​
 
 ## P2P-Bike-Rent Diagram
+
 ​
 ![Graph](assets/P2P-Rent-Bicycle.png)
 ​
@@ -48,8 +56,10 @@ who answer incorrectly are punished with a serious penalty such as 30% cut off. 
 ## RoadMap
 
 ### Rentee
--Royalites/Perks:The amount of deposit paid by those who do not damage the bicycles they use for a certain period of time will be reduced.
--If there is moderate damage to the bike, you will still not have to give the full deposit (the VDAO system will be developed).
+
+-Loyalties/Perks: The amount of deposit paid by users who earned trust (ex. no record of damage) of the system will be reduced.
+-The damage isn't black and white! Depending to the damage to the bike, you won't have to give the full deposit (the VDAO system will be furthermore developed).
+
 ### VDAO
--Approvers will see four options: no damage, slight, medium and heavy damage, depending on the voting results, the amount of deposit
-sent to the bike owner will gradually increase.
+
+-Approvers will see four options: no damage, slight, medium and heavy damage.

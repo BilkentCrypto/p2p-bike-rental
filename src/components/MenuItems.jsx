@@ -26,7 +26,7 @@ function MenuItems() {
       </Menu.Item>
       <Menu.Item key="/bearenter">
         <NavLink to="/bearenter" style={styles.tabLink}>
-          🚴 Renter
+          🚴 Rentor
         </NavLink>
       </Menu.Item>
       <Menu.Item key="/dao">
