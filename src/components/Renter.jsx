@@ -81,13 +81,22 @@ export default function Renter() {
           below{" "}
         </h1>
         <h2 style={{ color: "#fff" }}></h2>
-        <h3 style={{ color: "#fff" }}>
-          {" "}
-          Bike's availability {rentals.isAvailable}
-        </h3>
+
         <form>
-          <label>Bicycle Name:</label>
-          <Input placeholder="bike name" />
+          <label>Bicycle Model:</label>
+          <Input placeholder="Bicycle Model" />
+        </form>
+        <form>
+          <label>Bicycle Price:</label>
+          <Input placeholder="Bicycle Price" />
+        </form>
+        <form>
+          <label>Bicycle Year:</label>
+          <Input placeholder="Bicycle Year" />
+        </form>
+        <form>
+          <label>Time Price:</label>
+          <Input placeholder="Time Price" />
         </form>
         <button onClick={changeAvailability} style={styles.button}>
           Change Availability
