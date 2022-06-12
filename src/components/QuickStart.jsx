@@ -1,4 +1,3 @@
-import { AlignCenterOutlined } from "@ant-design/icons";
 import { Card, Col, Row, Timeline, Typography } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -48,11 +47,9 @@ export default function QuickStart() {
           </Card>
         </Col>
       </Row>
-
       <div id="more"></div>
-
       <Row gutter={[8, 24]}>
-        <Col span={8} style={{ height: "60vh" }}>
+        <Col span={8}>
           <Card
             style={styles.card}
             title={
@@ -100,7 +97,7 @@ export default function QuickStart() {
         </Col>
         <Col span={8}>
           <Card
-            style={{ marginTop: "10px", ...styles.card }}
+            style={styles.card}
             title={
               <>
                 📡 <Text strong> Validator's Info</Text>

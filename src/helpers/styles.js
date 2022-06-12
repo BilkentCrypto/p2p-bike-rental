@@ -5,7 +5,7 @@ export const styles = {
     fontFamily: "Helvetica, sans-serif",
     color: "#fff",
     marginTop: "130px",
-    padding: "10px",
+    padding: "0 10px",
   },
   header: {
     position: "fixed",
@@ -41,7 +41,6 @@ export const styles = {
     background: "#212124",
     border: "1px solid #46464D",
     borderRadius: "1rem",
-    width: "450px",
   },
   headerRentBike: {
     display: "flex",
