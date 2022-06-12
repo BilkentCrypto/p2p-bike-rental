@@ -17,9 +17,9 @@ also allows people to share their bikes and earn money. Lastly, it allows people
 ## Bike-Kit
 
 ​
-To Start, Rentors should first buy a bike-kit, a custom hardware that includes led screen and gps.
+To Start, Rentors should first buy a bike-kit, a custom hardware that includes led screen and gps and a automatic locker. The screen will be used to generate randomized qr codes [QRCodes] (https://github.com/BilkentCrypto/p2p-bike-rental/tree/qrcode-scanner/QR_Code_Scanner) <br />
 Upon opening the kit, the kit creates an Ethereum address and generates 3 unique numbers from this private key
-(V-R-S) using ECDS. The reason we use this method is because the owner of the bike should not know the private key of the bike/kit's account [ECDS](SignedMessageVerifier).
+(V-R-S) using ECDS. The reason we use this method is because the owner of the bike should not know the private key of the bike/kit's account [ECDS](https://github.com/BilkentCrypto/p2p-bike-rental/tree/signed-message-verifier/SignedMessageVerifier).
 ​
 
 ## Rentor
