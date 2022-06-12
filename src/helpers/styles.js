@@ -17,7 +17,7 @@ export const styles = {
     alignItems: "center",
     fontFamily: "Helvetica, sans-serif",
     borderBottom: "2px solid rgba(0, 0, 0, 0.06)",
-    padding: "0 10px",
+    // padding: "0 10px",
     boxShadow: "0 1px 10px rgb(151 164 175 / 10%)",
   },
   header2: {

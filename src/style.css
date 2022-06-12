@@ -6,7 +6,7 @@
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after,
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after,
 .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
-  border-bottom: 2px solid #fff !important;
+  border-bottom: 0px solid #fff !important;
 }
 
 .ant-menu-horizontal > .ant-menu-item-selected a,
@@ -23,6 +23,10 @@
   background: #161618;
 }
 
+.ant-layout-header {
+  padding: 0%;
+}
+
 .ant-layout-footer {
   background: #161618;
 }
@@ -30,10 +34,47 @@
 .ant-typography {
   color: rgba(255, 255, 255, 0.85);
 }
+
 .ant-timeline-item-head {
-  background: #212124;
+  background: #f8f8ff;
 }
 
 .ant-menu {
-  background: #000;
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(0, 0, 255, 1) 0%,
+    rgba(172, 48, 172, 1) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(0, 0, 255, 1) 0%,
+    rgba(172, 48, 172, 1) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    90deg,
+    rgba(0, 0, 255, 1) 0%,
+    rgba(172, 48, 172, 1) 100%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#AC30AC', endColorstr='#0000FF', GradientType=0);
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    90deg,
+    rgba(0, 0, 255, 1) 0%,
+    rgba(172, 48, 172, 1) 100%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 255, 1) 0%,
+    rgba(172, 48, 172, 1) 100%
+  );
 }
