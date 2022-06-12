@@ -48,7 +48,6 @@ export const styles = {
     flexDirection: "column",
     alignItems: "center",
     gap: "5px",
-
   },
   text: {
     fontSize: "16px",
