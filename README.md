@@ -1,8 +1,8 @@
 # P2P Bike Rent
 Rent other people's bikes. Stay anonymous, help the urbanism movement. Join VDAO, stake and start earning with "verify2earn"! Not using your bike currently? - Earn extra crypto
 <br />
-**P2P Bike Rent allows users to rent bikes over the rinkeby test network without providing any personal data,
-and allows people with bikes to share their bikes with other people and earn money.**
+**P2P Bike Rent provides an opportunity for users to rent bikes without providing any personal data. It
+also allows people to share their bikes and earn money. Lastly, it allows people to earn extra income by joining the Validator Network and Verify2Earn**
 
 [Rental Contract](https://rinkeby.etherscan.io/address/0x912c973E6A3DAdaee3FBDe072052d627Ece6829B).
 <br />
