@@ -1,4 +1,4 @@
-import { Card, Input } from "antd";
+import { Card } from "antd";
 import { useEffect, useState } from "react";
 import Web3Modal from "web3modal";
 import { userAddress } from "../config";
@@ -73,35 +73,17 @@ export default function Renter() {
   return (
     <Card style={styles.card}>
       <div style={styles.headerRenter}>
-        Hi {"  \n "}
-        You have a kit, now you can add your bicycle on blockchain.
-        <h1 style={{ color: "#fff", textAlign: "center" }}>
-          {" "}
-          Enter the (V, R, S) information on the kit and other bike information
-          below{" "}
-        </h1>
-        <h2 style={{ color: "#fff" }}></h2>
-        <form>
-          <label>Bicycle Model:</label>
-          <Input placeholder="Bicycle Model" />
-        </form>
-        <form>
-          <label>Bicycle Price:</label>
-          <Input placeholder="Bicycle Price" />
-        </form>
-        <form>
-          <label>Bicycle Year:</label>
-          <Input placeholder="Bicycle Year" />
-        </form>
-        <form>
-          <label>Time Price:</label>
-          <Input placeholder="Time Price" />
-        </form>
+        Your bike's Info:
+        <h1 style={styles.header2}> Name: {rentals[0]} </h1>
+        <h4 style={styles.header4}> Available: {rentals.isAvailable + " "}</h4>
+        <h4 style={styles.header4}> (You might need to refresh that)</h4>
+        <br />
         <button onClick={changeAvailability} style={styles.button}>
           Change Availability
         </button>
-        <p> As a tutorial </p>
-        <Link to="/buykit"> Don't have a bike? </Link>
+        <br />
+        <p> Also, for tutorial purposes: </p>
+        <Link to="/buykit"> Want to add your bike? </Link>
       </div>
     </Card>
   );

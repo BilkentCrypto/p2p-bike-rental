@@ -16,6 +16,7 @@ import Rentee from "./components/Rentee";
 import Rentabike from "./components/Rentabike";
 import { styles } from "./helpers/styles";
 import DAO from "./components/DAO";
+import Buykit from "./components/Buykit";
 const { Header, Footer } = Layout;
 
 const App = () => {
@@ -53,8 +54,8 @@ const App = () => {
             <Route path="/dao">
               <DAO />
             </Route>
-            <Route path="/">
-              <Redirect to="/quickstart" />
+            <Route path="/buykit">
+              <Buykit />
             </Route>
             <Route path="/">
               <Redirect to="/quickstart" />
