@@ -1,4 +1,4 @@
-# P2P-Rent-Bicycle
+# P2P-Bike-Rent
 
 **It is a dApp that allows users to rent bikes over the rinkeby test network without providing any personal data,
 and allows people with bikes to share their bikes with other people and earn money.**
@@ -40,7 +40,7 @@ included in the system by giving 0.1 ether for now. This money is sent to the ow
 who answer incorrectly are punished with a serious penalty such as 30% cut off. ![Graph](assets/VDAO.png)
 ​
 
-## P2P-Rent-Bike Diagram
+## P2P-Bike-Rent Diagram
 ​
 ![Graph](assets/P2P-Rent-Bicycle.png)
 ​
