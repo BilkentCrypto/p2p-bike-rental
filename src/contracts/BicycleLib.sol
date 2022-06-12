@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.10;
+pragma solidity ^0.8.0;
 
 library BicycleLib {
     //This library contains helps create Bicycle Objects for Rental Contracts
@@ -10,8 +10,9 @@ library BicycleLib {
         address owner; //Owner of bicycle
         uint bicyclePrice; // Price of bicycle
         uint year;   // index of the voted proposal
-        uint bicycleId; // index of car to be rented 
+        uint bicycleId; // index of bicycle to be rented 
         uint timePrice;
         uint start;
+        string lastImageURI;
     }
 }
