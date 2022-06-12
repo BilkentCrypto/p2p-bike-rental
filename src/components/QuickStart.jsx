@@ -95,7 +95,7 @@ export default function QuickStart() {
               </Timeline.Item>
               <Timeline.Item dot="💲">
                 <Link to="/bearenter" style={styles.link}>
-                  Renter's Page
+                  Rentor's Page
                 </Link>
               </Timeline.Item>
             </Timeline>

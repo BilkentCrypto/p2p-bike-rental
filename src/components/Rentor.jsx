@@ -8,7 +8,7 @@ import { styles } from "../helpers/styles";
 import { Link } from "react-router-dom";
 // To-do Buy a Kit function
 
-export default function Renter() {
+export default function Rentor() {
   // List the bike of one person
   // Change the availability of the bike
   const [rentals, setRentals] = useState([]);
