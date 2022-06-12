@@ -57,7 +57,7 @@ Lastly, those who answer incorrectly are punished with a serious penalty ~ 30% c
 
 ### Rentee
 
--Royalties/Perks: The amount of deposit paid by users who earned trust (ex. no record of damage) of the system will be reduced.
+-Loyalties/Perks: The amount of deposit paid by users who earned trust (ex. no record of damage) of the system will be reduced.
 -The damage isn't black and white! Depending to the damage to the bike, you won't have to give the full deposit (the VDAO system will be furthermore developed).
 
 ### VDAO
