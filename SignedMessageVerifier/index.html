@@ -1,0 +1,48 @@
+<style>
+  body {
+    background-color: cornsilk;
+  }
+</style>
+
+<button onClick="signMessage()">Sign Message</button>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0-rc.0/web3.min.js"
+  integrity="sha512-/PTXSvaFzmO4So7Ghyq+DEZOz0sNLU4v1DP4gMOfY3kFu9L/IKoqSHZ6lNl3ZoZ7wT20io3vu/U4IchGcGIhfw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script>
+  async function signMessage() {
+    //if (!window.ethereum) return alert("Please Install Metamask");
+
+    var web3 = new Web3(
+      Web3.givenProvider || "ws://some.local-or-remote.node:8546",
+    );
+    // connect and get metamask account
+    //const accounts = await ethereum.request({ method: "eth_requestAccounts" });
+    //const account = web3.eth.accounts.privateKeyToAccount(privateKey);
+    const account = web3.eth.accounts.create();
+    privateKey = account.privateKey;
+    // message to sign
+    const message = "approved";
+    console.log({ message });
+
+    // hash message
+    const hashedMessage = Web3.utils.sha3(message);
+    console.log({ hashedMessage });
+
+    // sign hashed message
+    const signature = web3.eth.accounts.sign(message, privateKey);
+    console.log({ signature });
+
+    // split signature
+    const r = signature.r;
+    const s = signature.s;
+    const v = parseInt(signature.v);
+    const address = account.address;
+    console.log({ r, s, v, address });
+    //document.write(r, "/n", s, "/n", v)
+
+    alert(signature);
+  }
+</script>
