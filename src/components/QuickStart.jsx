@@ -54,17 +54,21 @@ export default function QuickStart() {
             style={styles.card}
             title={
               <>
-                📝 <Text strong>I'm a Bike User</Text>
+                <Text strong>I wanna ride a bike!</Text>
               </>
             }
           >
             <Timeline mode="left" style={styles.timeline}>
               <Timeline.Item dot="📄">
-                <h1 style={styles.text}> Check Available Bikes in my area</h1>
+                <h3 style={styles.text}> Check Available Bikes in my area</h3>
+              </Timeline.Item>
+              <Timeline.Item dot="📄">
                 <h3 style={styles.text}>
                   {" "}
                   The BMX bike (2.5km away) is waiting for you to ride it{" "}
                 </h3>
+              </Timeline.Item>
+              <Timeline.Item dot="📄">
                 <Link to="/bearentee" style={styles.link}>
                   {" "}
                   Rent Me!{" "}
@@ -78,16 +82,18 @@ export default function QuickStart() {
             style={styles.card}
             title={
               <>
-                <Text strong>For Renter</Text>
+                <Text strong>I wanna rent my bike!</Text>
               </>
             }
           >
             <Timeline mode="left" style={styles.timeline}>
               <Timeline.Item dot="💿">
-                <h1 style={styles.text}>
-                  {" "}
-                  I want to check my bicycle's condition
-                </h1>
+                <h3 style={styles.text}> Change bicycle's availability</h3>
+              </Timeline.Item>
+              <Timeline.Item dot="💿">
+                <h3 style={styles.text}> Check bicycle's condition</h3>
+              </Timeline.Item>
+              <Timeline.Item dot="💿">
                 <Link to="/bearenter" style={styles.link}>
                   Renter's Page
                 </Link>
@@ -106,7 +112,12 @@ export default function QuickStart() {
           >
             <Timeline mode="left" style={styles.timeline}>
               <Timeline.Item dot="💿">
-                <h1 style={styles.text}> I want to verify to earn!</h1>
+                <h3 style={styles.text}> I want to verify to earn!</h3>
+              </Timeline.Item>
+              <Timeline.Item dot="💿">
+                <h3 style={styles.text}> Stake to join the pool!</h3>
+              </Timeline.Item>
+              <Timeline.Item dot="💿">
                 <Link to="/bearenter" style={styles.link}>
                   DAO Contributor!
                 </Link>

@@ -81,7 +81,6 @@ export default function Renter() {
           below{" "}
         </h1>
         <h2 style={{ color: "#fff" }}></h2>
-
         <form>
           <label>Bicycle Model:</label>
           <Input placeholder="Bicycle Model" />

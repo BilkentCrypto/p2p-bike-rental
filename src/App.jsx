@@ -13,7 +13,7 @@ import QuickStart from "components/QuickStart";
 import MenuItems from "./components/MenuItems";
 import Renter from "./components/Renter";
 import Rentee from "./components/Rentee";
-import Rentabike from "./Rentabike";
+import Rentabike from "./components/Rentabike";
 import { styles } from "./helpers/styles";
 import DAO from "./components/DAO";
 const { Header, Footer } = Layout;
