@@ -144,8 +144,6 @@ contract VDAO is VRFConsumerBaseV2, KeeperCompatibleInterface {
     newRequest.rewardPool = msg.value;
     newRequest.bicycleId = bicycleId;
 
-    //random verifier seç
-
     uint256 requestId = COORDINATOR.requestRandomWords(
       keyHash,
       s_subscriptionId,
@@ -166,8 +164,6 @@ contract VDAO is VRFConsumerBaseV2, KeeperCompatibleInterface {
     newRequest.newImageURI = _newImageURI;
     newRequest.rewardPool = msg.value;
     //newRequest.bicycleId = bicycleId;
-
-    //random verifier seç
 
     uint256 requestId = COORDINATOR.requestRandomWords(
       keyHash,
@@ -303,9 +299,6 @@ contract VDAO is VRFConsumerBaseV2, KeeperCompatibleInterface {
     } else {
       rentalContract.transferDeposit(request.bicycleId, false);
     }
-
-    //run constructor
-    //keeper ekle
   }
 
   function mockEndRequest(uint256 requstIndex) public {
@@ -361,9 +354,6 @@ contract VDAO is VRFConsumerBaseV2, KeeperCompatibleInterface {
       currentPunishmentPool +
       toBeAddedToPunishmentPool -
       removedFromPunishmentPool;
-
-    //run constructor
-    //keeper ekle
   }
 
   function bytesToUint(bytes memory b) internal pure returns (uint256) {
